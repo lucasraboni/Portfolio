@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <title>Sobre mí — Lucas Raboni</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <nav>
+        <ul class="nav-links">
+            <li><a href="/" data-i18n="nav.welcome">welcome</a></li>
+            <li><a href="/sobre-mi" class="active" data-i18n="nav.sobre">sobre mí</a></li>
+            <li><a href="/formacion" data-i18n="nav.formacion">formación</a></li>
+            <li><a href="/habilidades" data-i18n="nav.habilidades">habilidades</a></li>
+            <li><a href="/portfolio" data-i18n="nav.portfolio">portfolio</a></li>
+            <li><a href="/contacto" data-i18n="nav.contacto">contacto</a></li>
+        </ul>
+        <div class="nav-icons">
+            <a href="https://www.linkedin.com/in/lucas-raboni-71b012236/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/lucasraboni_/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:lucasraboni7@gmail.com"><i class="far fa-envelope"></i></a>
+        </div>
+    </nav>
+
+    <section class="hero hero-small">
+        <div class="hero-slide active" style="background-image: url('/img/foto-mia-2.jpg'); background-position: center 40%;"></div>
+        <div class="hero-content">
+            <h1 class="hero-title" data-i18n="sobre.hero">sobre mí</h1>
+        </div>
+    </section>
+
+    <section class="page-section">
+        <div class="sobre-grid">
+
+            <div class="sobre-foto">
+                <img src="/img/foto-personal-2.jpg" alt="Lucas Raboni">
+            </div>
+
+            <div class="sobre-content">
+                <p class="section-text" data-i18n="sobre.p1">
+                    Soy Lucas Raboni, tengo 23 años y vivo en Azcuenaga, San Andrés de Giles — un pueblo chico con mucha identidad, de esos que uno siempre lleva puesto.
+                </p>
+                <p class="section-text" style="margin-top: 24px;" data-i18n="sobre.p2">
+                    Mi vínculo con el diseño y la programación arrancó desde chico, creando flyers de equipos y jugadores de eSports en Photoshop. Eso fue el primer chispazo. Hace 4 años formalicé ese camino estudiando Programación Web de manera remota en la Universidad Da Vinci.
+                </p>
+                <p class="section-text" style="margin-top: 24px;" data-i18n="sobre.p3">
+                    Me apasiona construir cosas que se vean bien y funcionen bien. El detalle importa.
+                </p>
+
+                <div class="sobre-datos">
+                    <div class="dato-item">
+                        <span class="dato-label" data-i18n="sobre.ubicacion.label">ubicación</span>
+                        <span class="dato-valor">Azcuenaga, San Andrés de Giles, Bs. As.</span>
+                    </div>
+                    <div class="dato-item">
+                        <span class="dato-label" data-i18n="sobre.edad.label">edad</span>
+                        <span class="dato-valor">23 años</span>
+                    </div>
+                    <div class="dato-item">
+                        <span class="dato-label" data-i18n="sobre.futbol.label">fútbol</span>
+                        <span class="dato-valor">Vélez Sarsfield</span>
+                    </div>
+                    <div class="dato-item">
+                        <span class="dato-label" data-i18n="sobre.deporte.label">deporte</span>
+                        <span class="dato-valor">Tenis</span>
+                    </div>
+                    <div class="dato-item">
+                        <span class="dato-label" data-i18n="sobre.musica.label">música</span>
+                        <span class="dato-valor">Rock nacional · Techno</span>
+                    </div>
+                    <div class="dato-item">
+                        <span class="dato-label" data-i18n="sobre.referentes.label">referentes</span>
+                        <span class="dato-valor">Patricio Rey y Sus Redonditos de Ricota</span>
+                    </div>
+                    <a href="/cv.html" target="_blank" class="detail-link" style="display:inline-block; margin-top:40px;">
+                        <span data-i18n="sobre.cv">ver CV</span> <i class="fas fa-arrow-right" style="margin-left:8px; font-size:0.7rem;"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-icons">
+            <a href="https://www.linkedin.com/in/lucas-raboni-71b012236/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/lucasraboni_/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:lucasraboni7@gmail.com"><i class="far fa-envelope"></i></a>
+        </div>
+        <p class="footer-copy" data-i18n="footer.copy">All rights reserved | Lucas Raboni | 2026</p>
+    </footer>
+
+    <script src="/js/theme.js"></script>
+    <script src="/js/i18n.js"></script>
+</body>
+</html>

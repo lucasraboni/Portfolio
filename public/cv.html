@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV — Lucas Raboni</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #0a0a0a;
+            color: #fff;
+            min-height: 100vh;
+        }
+
+        a { color: inherit; text-decoration: none; }
+
+        /* BARRA SUPERIOR */
+        .cv-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            max-width: 874px;
+            margin: 0 auto;
+        }
+
+        .cv-back {
+            font-size: 0.72rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            opacity: 0.45;
+            transition: opacity 0.3s;
+        }
+        .cv-back:hover { opacity: 1; }
+
+        .btn-download {
+            background: none;
+            border: 1px solid rgba(255,255,255,0.35);
+            color: #fff;
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            padding: 10px 24px;
+            cursor: pointer;
+            transition: background 0.3s, color 0.3s;
+        }
+        .btn-download:hover { background: #fff; color: #000; }
+
+        /* PÁGINA CV */
+        .cv-page {
+            max-width: 794px;
+            margin: 0 auto 60px;
+            padding: 56px 60px;
+            background: #111;
+            border: 1px solid rgba(255,255,255,0.06);
+        }
+
+        /* HEADER */
+        .cv-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 44px;
+            padding-bottom: 36px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .cv-logo-circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1.5px solid rgba(255,255,255,0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            font-weight: 900;
+            letter-spacing: -0.5px;
+            margin-bottom: 14px;
+        }
+
+        .cv-name {
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            line-height: 1;
+            margin-bottom: 6px;
+        }
+
+        .cv-subtitle {
+            font-size: 0.82rem;
+            font-weight: 300;
+            opacity: 0.5;
+            letter-spacing: 0.05em;
+        }
+
+        .cv-contact-block {
+            text-align: right;
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+            padding-top: 4px;
+        }
+
+        .cv-contact-item {
+            font-size: 0.76rem;
+            font-weight: 300;
+            opacity: 0.6;
+        }
+
+        /* GRID DOS COLUMNAS */
+        .cv-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.4fr;
+            gap: 48px;
+        }
+
+        /* SECCIÓN */
+        .cv-section { margin-bottom: 36px; }
+
+        .cv-section-title {
+            font-size: 0.62rem;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            opacity: 0.38;
+            margin-bottom: 18px;
+        }
+
+        /* ITEMS */
+        .cv-item { margin-bottom: 20px; }
+
+        .cv-item-date {
+            font-size: 0.68rem;
+            opacity: 0.38;
+            letter-spacing: 0.08em;
+            margin-bottom: 3px;
+        }
+
+        .cv-item-title {
+            font-size: 0.92rem;
+            font-weight: 600;
+            margin-bottom: 3px;
+        }
+
+        .cv-item-sub {
+            font-size: 0.78rem;
+            font-weight: 300;
+            opacity: 0.55;
+        }
+
+        /* BARRAS */
+        .cv-skill { margin-bottom: 13px; }
+
+        .cv-skill-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.76rem;
+            margin-bottom: 6px;
+            opacity: 0.75;
+        }
+
+        .cv-skill-bar {
+            height: 2px;
+            background: rgba(255,255,255,0.08);
+            border-radius: 2px;
+        }
+
+        .cv-skill-fill {
+            height: 100%;
+            background: #fff;
+            border-radius: 2px;
+        }
+
+        /* TAGS */
+        .cv-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .cv-tag {
+            border: 1px solid rgba(255,255,255,0.18);
+            padding: 3px 10px;
+            font-size: 0.68rem;
+            border-radius: 20px;
+            opacity: 0.65;
+        }
+
+        /* IMPRIMIR */
+        @media print {
+            body { background: #fff; color: #111; }
+            .cv-actions { display: none; }
+            .cv-page {
+                background: #fff;
+                border: none;
+                max-width: 100%;
+                margin: 0;
+                padding: 40px;
+            }
+            .cv-header { border-bottom-color: rgba(0,0,0,0.12); }
+            .cv-logo-circle { border-color: rgba(0,0,0,0.35); }
+            .cv-skill-bar { background: rgba(0,0,0,0.08); }
+            .cv-skill-fill { background: #111; }
+            .cv-tag { border-color: rgba(0,0,0,0.18); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cv-actions">
+        <a href="/" class="cv-back">← volver</a>
+        <button class="btn-download" onclick="window.print()">descargar pdf</button>
+    </div>
+
+    <div class="cv-page">
+
+        <header class="cv-header">
+            <div>
+                <div class="cv-logo-circle">LR</div>
+                <h1 class="cv-name">Lucas Raboni</h1>
+                <p class="cv-subtitle">Diseño y Programación Web</p>
+            </div>
+            <div class="cv-contact-block">
+                <span class="cv-contact-item">lucasraboni7@gmail.com</span>
+                <span class="cv-contact-item">San Andrés de Giles, Buenos Aires</span>
+                <span class="cv-contact-item">linkedin.com/in/lucas-raboni-71b012236</span>
+                <span class="cv-contact-item">instagram.com/lucasraboni_</span>
+            </div>
+        </header>
+
+        <div class="cv-grid">
+
+            <!-- COLUMNA IZQUIERDA -->
+            <div>
+                <section class="cv-section">
+                    <p class="cv-section-title">educación</p>
+
+                    <div class="cv-item">
+                        <p class="cv-item-date">2024 — actualidad</p>
+                        <p class="cv-item-title">Diseño y Programación Web</p>
+                        <p class="cv-item-sub">Universidad Da Vinci · Remoto</p>
+                    </div>
+
+                    <div class="cv-item">
+                        <p class="cv-item-date">Curso</p>
+                        <p class="cv-item-title">Programación Web</p>
+                        <p class="cv-item-sub">CoderHouse</p>
+                    </div>
+
+                    <div class="cv-item">
+                        <p class="cv-item-date">Hasta 2020</p>
+                        <p class="cv-item-title">Educación Secundaria Técnica</p>
+                        <p class="cv-item-sub">EEST N°1 · San Andrés de Giles</p>
+                    </div>
+                </section>
+
+                <section class="cv-section">
+                    <p class="cv-section-title">habilidades</p>
+
+                    <div class="cv-skill">
+                        <div class="cv-skill-label"><span>HTML / CSS</span><span>80%</span></div>
+                        <div class="cv-skill-bar"><div class="cv-skill-fill" style="width:80%"></div></div>
+                    </div>
+                    <div class="cv-skill">
+                        <div class="cv-skill-label"><span>Bootstrap</span><span>75%</span></div>
+                        <div class="cv-skill-bar"><div class="cv-skill-fill" style="width:75%"></div></div>
+                    </div>
+                    <div class="cv-skill">
+                        <div class="cv-skill-label"><span>PHP / Laravel</span><span>65%</span></div>
+                        <div class="cv-skill-bar"><div class="cv-skill-fill" style="width:65%"></div></div>
+                    </div>
+                    <div class="cv-skill">
+                        <div class="cv-skill-label"><span>Vue.js</span><span>60%</span></div>
+                        <div class="cv-skill-bar"><div class="cv-skill-fill" style="width:60%"></div></div>
+                    </div>
+                    <div class="cv-skill">
+                        <div class="cv-skill-label"><span>Node.js / Express</span><span>55%</span></div>
+                        <div class="cv-skill-bar"><div class="cv-skill-fill" style="width:55%"></div></div>
+                    </div>
+                    <div class="cv-skill">
+                        <div class="cv-skill-label"><span>JavaScript</span><span>30%</span></div>
+                        <div class="cv-skill-bar"><div class="cv-skill-fill" style="width:30%"></div></div>
+                    </div>
+                    <div class="cv-skill">
+                        <div class="cv-skill-label"><span>Photoshop</span><span>80%</span></div>
+                        <div class="cv-skill-bar"><div class="cv-skill-fill" style="width:80%"></div></div>
+                    </div>
+                    <div class="cv-skill">
+                        <div class="cv-skill-label"><span>GitHub</span><span>70%</span></div>
+                        <div class="cv-skill-bar"><div class="cv-skill-fill" style="width:70%"></div></div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- COLUMNA DERECHA -->
+            <div>
+                <section class="cv-section">
+                    <p class="cv-section-title">experiencia</p>
+
+                    <div class="cv-item">
+                        <p class="cv-item-date">2026 — próximamente</p>
+                        <p class="cv-item-title">Encargado Web</p>
+                        <p class="cv-item-sub">CETASA · Cooperativa Eléctrica de Azcuenaga</p>
+                    </div>
+
+                    <div class="cv-item">
+                        <p class="cv-item-date">2026 — próximamente</p>
+                        <p class="cv-item-title">Encargado Web</p>
+                        <p class="cv-item-sub">Club Recreativo Apolo</p>
+                    </div>
+
+                    <div class="cv-item">
+                        <p class="cv-item-date">2020 — actualidad</p>
+                        <p class="cv-item-title">Administrativo</p>
+                        <p class="cv-item-sub">CETASA · Cooperativa Eléctrica de Azcuenaga</p>
+                    </div>
+                </section>
+
+                <section class="cv-section">
+                    <p class="cv-section-title">proyectos destacados</p>
+
+                    <div class="cv-item">
+                        <p class="cv-item-title">CETASA — Sitio Institucional</p>
+                        <p class="cv-item-sub">Cliente real · PHP · MySQL</p>
+                    </div>
+
+                    <div class="cv-item">
+                        <p class="cv-item-title">Vinyl Vibes</p>
+                        <p class="cv-item-sub">Tienda de vinilos · MERN Stack</p>
+                    </div>
+
+                    <div class="cv-item">
+                        <p class="cv-item-title">Todo TC</p>
+                        <p class="cv-item-sub">Tienda de coleccionables · HTML · CSS · JS</p>
+                    </div>
+
+                    <div class="cv-item">
+                        <p class="cv-item-title">Portfolio Personal</p>
+                        <p class="cv-item-sub">Node.js · Express · HTML · CSS</p>
+                    </div>
+                </section>
+
+                <section class="cv-section">
+                    <p class="cv-section-title">tecnologías</p>
+                    <div class="cv-tags">
+                        <span class="cv-tag">HTML</span>
+                        <span class="cv-tag">CSS</span>
+                        <span class="cv-tag">SASS</span>
+                        <span class="cv-tag">JavaScript</span>
+                        <span class="cv-tag">Bootstrap</span>
+                        <span class="cv-tag">Vue.js</span>
+                        <span class="cv-tag">React</span>
+                        <span class="cv-tag">PHP</span>
+                        <span class="cv-tag">Laravel</span>
+                        <span class="cv-tag">Node.js</span>
+                        <span class="cv-tag">Express</span>
+                        <span class="cv-tag">MySQL</span>
+                        <span class="cv-tag">MongoDB</span>
+                        <span class="cv-tag">GitHub</span>
+                        <span class="cv-tag">Photoshop</span>
+                        <span class="cv-tag">Illustrator</span>
+                    </div>
+                </section>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

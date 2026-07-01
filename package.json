@@ -1,0 +1,21 @@
+{
+  "name": "lucas-raboni-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio personal de Lucas Raboni",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "start": "node main.js",
+    "dev": "nodemon main.js"
+  },
+  "author": "Lucas Raboni",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "5.2.1",
+    "nodemailer": "^9.0.3"
+  }
+}

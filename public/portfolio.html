@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <title>Portfolio — Lucas Raboni</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <nav>
+        <ul class="nav-links">
+            <li><a href="/" data-i18n="nav.welcome">welcome</a></li>
+            <li><a href="/sobre-mi" data-i18n="nav.sobre">sobre mí</a></li>
+            <li><a href="/formacion" data-i18n="nav.formacion">formación</a></li>
+            <li><a href="/habilidades" data-i18n="nav.habilidades">habilidades</a></li>
+            <li><a href="/portfolio" class="active" data-i18n="nav.portfolio">portfolio</a></li>
+            <li><a href="/contacto" data-i18n="nav.contacto">contacto</a></li>
+        </ul>
+        <div class="nav-icons">
+            <a href="https://www.linkedin.com/in/lucas-raboni-71b012236/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/lucasraboni_/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:lucasraboni7@gmail.com"><i class="far fa-envelope"></i></a>
+        </div>
+    </nav>
+
+    <section class="hero hero-small">
+        <div class="hero-slide active" style="background-image: url('/img/foto-mia-5.webp')"></div>
+        <div class="hero-content">
+            <h1 class="hero-title" data-i18n="port.hero">portfolio</h1>
+        </div>
+    </section>
+
+    <div class="portfolio-grid">
+
+        <a href="/portfolio/redondos.html" class="portfolio-item">
+            <img src="/img/proyecto-redondos.jpg" alt="Proyecto Banda Patricio Rey y Sus Redonditos de Ricota">
+            <div class="portfolio-overlay">
+                <p class="overlay-tag">HTML · CSS</p>
+                <p class="overlay-title">Patricio Rey y Sus Redonditos de Ricota</p>
+                <p class="overlay-desc">Página web sobre la banda mas grande de Argentina.</p>
+            </div>
+        </a>
+
+        <a href="/portfolio/todotc.html" class="portfolio-item">
+            <img src="/img/proyecto-todotc.jpg" alt="Proyecto sobre el TC">
+            <div class="portfolio-overlay">
+                <p class="overlay-tag">HTML · CSS · JS</p>
+                <p class="overlay-title">Todo TC</p>
+                <p class="overlay-desc">Tienda online de coleccionables del Turismo Carretera.</p>
+            </div>
+        </a>
+
+        <a href="/portfolio/redondos-recomendador.html" class="portfolio-item">
+            <img src="/img/proyecto-recomendador.jpg" alt="Proyecto de recomendador de disco de la banda Patricio Rey">
+            <div class="portfolio-overlay">
+                <p class="overlay-tag">HTML · CSS · JavaScript</p>
+                <p class="overlay-title">Redondos — Recomendador</p>
+                <p class="overlay-desc">Respondés preguntas sobre tu estado de ánimo y el sitio te recomienda un disco de Los Redondos.</p>
+            </div>
+        </a>
+
+        <a href="/portfolio/vinyl-vibes.html" class="portfolio-item">
+            <img src="/img/proyecto-vinylvibes.jpg" alt="Proyecto de tienda de Vinilos con PHP">
+            <div class="portfolio-overlay">
+                <p class="overlay-tag">PHP · MySQL · HTML · CSS</p>
+                <p class="overlay-title">Vinyl Vibes — PHP</p>
+                <p class="overlay-desc">Tienda de vinilos con carrito, login y ABM completo. Primera versión con PHP y MySQL.</p>
+            </div>
+        </a>
+
+        <a href="/portfolio/cetasa.html" class="portfolio-item">
+            <img src="/img/proyecto-cetasa.jpg" alt="Proyecto de web cetasa">
+            <div class="portfolio-overlay">
+                <p class="overlay-tag">PHP · MySQL · HTML · CSS</p>
+                <p class="overlay-title">CETASA</p>
+                <p class="overlay-desc">Sitio institucional real de la Cooperativa Eléctrica de Azcuenaga. Noticias, servicios y descarga de factura.</p>
+            </div>
+        </a>
+
+        <a href="/portfolio/vinyl-laravel.html" class="portfolio-item">
+            <img src="/img/proyecto-vinylvibes.jpg" alt="Proyecto de tienda de Vinilos con laravel">
+            <div class="portfolio-overlay">
+                <p class="overlay-tag">Laravel · MongoDB · HTML · CSS</p>
+                <p class="overlay-title">Vinyl Vibes — Laravel</p>
+                <p class="overlay-desc">Reescritura de la tienda de vinilos usando Laravel como framework backend.</p>
+            </div>
+        </a>
+
+    </div>
+
+    <footer>
+        <div class="footer-icons">
+            <a href="https://www.linkedin.com/in/lucas-raboni-71b012236/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/lucasraboni_/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:lucasraboni7@gmail.com"><i class="far fa-envelope"></i></a>
+        </div>
+        <p class="footer-copy" data-i18n="footer.copy">All rights reserved | Lucas Raboni | 2026</p>
+    </footer>
+
+    <script src="/js/theme.js"></script>
+    <script src="/js/i18n.js"></script>
+</body>
+</html>
