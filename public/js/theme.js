@@ -1,6 +1,12 @@
 // Fade in al cargar la página
 document.body.style.opacity = '0'
 
+// Al volver con "atrás", el navegador restaura la página como quedó (con el fade-out
+// aplicado) y sin volver a ejecutar el JS: la mostramos de nuevo
+window.addEventListener('pageshow', e => {
+    if (e.persisted) document.body.style.opacity = '1'
+})
+
 document.addEventListener('DOMContentLoaded', () => {
 
     // === FADE IN ===
