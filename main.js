@@ -1,17 +1,20 @@
 import 'dotenv/config'
 import express from 'express'
+import { join, dirname } from 'path'
+import { fileURLToPath } from 'url'
 import pageRoutes from './routes/page.routes.js'
 import { noEncontrado } from './controllers/page.controllers.js'
 import { securityHeaders } from './middlewares/security.js'
 
 const app = express()
+const __dirname = dirname(fileURLToPath(import.meta.url))
 
 app.disable('x-powered-by')   // no anunciar que el servidor es Express
 app.set('trust proxy', 1)     // el hosting pone un proxy adelante: así req.ip y req.secure son los reales
 
 app.use(securityHeaders)
 app.use(express.urlencoded({ extended: false, limit: '10kb' }))
-app.use(express.static('public', { redirect: false }))
+app.use(express.static(join(__dirname, 'public'), { redirect: false }))
 
 app.use('/', pageRoutes)
 
