@@ -67,6 +67,7 @@ const LANG = {
     'detail.year':  'año',
     'detail.type':  'tipo',
     'detail.view':  'ver proyecto',
+    'detail.code':  'ver código',
     // Footer
     'footer.copy':  'Todos los derechos reservados | Lucas Raboni | 2026',
   },
@@ -139,6 +140,7 @@ const LANG = {
     'detail.year':  'year',
     'detail.type':  'type',
     'detail.view':  'view project',
+    'detail.code':  'view code',
     // Footer
     'footer.copy':  'All rights reserved | Lucas Raboni | 2026',
   },
@@ -211,6 +213,7 @@ const LANG = {
     'detail.year':  'année',
     'detail.type':  'type',
     'detail.view':  'voir le projet',
+    'detail.code':  'voir le code',
     // Footer
     'footer.copy':  'Tous droits réservés | Lucas Raboni | 2026',
   },
@@ -283,6 +286,7 @@ const LANG = {
     'detail.year':  'ano',
     'detail.type':  'tipo',
     'detail.view':  'ver projeto',
+    'detail.code':  'ver código',
     // Footer
     'footer.copy':  'Todos os direitos reservados | Lucas Raboni | 2026',
   }

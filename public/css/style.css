@@ -506,6 +506,12 @@ footer {
     opacity: 1;
 }
 
+.detail-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
 /* === TOGGLE TEMA === */
 #theme-toggle {
     background: none;
