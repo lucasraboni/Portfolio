@@ -675,6 +675,24 @@ body.light-mode .form-btn:hover { background: #111; color: #fff; }
     transition: background 0.3s ease, color 0.3s ease;
 }
 .form-btn:hover { background: #fff; color: #000; }
+
+.form-error {
+    font-size: 0.88rem;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #ff8a80;
+    margin-bottom: 28px;
+}
+body.light-mode .form-error { color: #c62828; }
+/* Honeypot: fuera de pantalla (con display:none algunos bots lo detectan) */
+.hp {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
 .info-item {
     display: flex;
     flex-direction: column;
@@ -710,6 +728,16 @@ body.menu-open { overflow: hidden; }
 @media (hover: none), (max-width: 768px) {
     .portfolio-overlay { opacity: 1; }
     .portfolio-item img { filter: none; }
+}
+
+/* Pantallas medianas: el nav completo no entra, achicamos y sacamos
+   las redes (siguen en el footer) */
+.nav-links a { white-space: nowrap; }
+
+@media (max-width: 1024px) {
+    nav { padding: 24px 28px; }
+    .nav-links { gap: 18px; }
+    .nav-icons > a { display: none; }
 }
 
 /* === RESPONSIVE MOBILE === */
@@ -809,9 +837,6 @@ body.menu-open { overflow: hidden; }
     /* FOOTER */
     footer { padding: 28px 24px; }
 
-    /* NAV: las redes ya están en el footer; así tema e idiomas
-       tienen lugar y se pueden tocar con el dedo */
-    .nav-icons > a { display: none; }
     .lang-btn { font-size: 0.75rem; padding: 10px 6px; }
     #theme-toggle { padding: 10px; margin-left: 4px; font-size: 1.1rem; }
 

@@ -41,18 +41,24 @@
 
             <div>
                 <p class="col-title" data-i18n="contact.form.title">escribime</p>
+                <p class="form-error" id="form-error" role="alert" hidden></p>
                 <form action="/contacto" method="POST">
                     <div class="form-group">
-                        <label class="form-label" data-i18n="contact.label.name">nombre</label>
-                        <input type="text" name="nombre" class="form-input" required>
+                        <label class="form-label" for="nombre" data-i18n="contact.label.name">nombre</label>
+                        <input type="text" id="nombre" name="nombre" class="form-input" maxlength="100" autocomplete="name" required>
                     </div>
                     <div class="form-group">
-                        <label class="form-label" data-i18n="contact.label.email">email</label>
-                        <input type="email" name="email" class="form-input" required>
+                        <label class="form-label" for="email" data-i18n="contact.label.email">email</label>
+                        <input type="email" id="email" name="email" class="form-input" maxlength="150" autocomplete="email" required>
                     </div>
                     <div class="form-group">
-                        <label class="form-label" data-i18n="contact.label.message">mensaje</label>
-                        <textarea name="mensaje" class="form-input form-textarea" required></textarea>
+                        <label class="form-label" for="mensaje" data-i18n="contact.label.message">mensaje</label>
+                        <textarea id="mensaje" name="mensaje" class="form-input form-textarea" maxlength="3000" required></textarea>
+                    </div>
+                    <!-- Honeypot anti-spam: oculto para las personas, los bots lo completan -->
+                    <div class="hp" aria-hidden="true">
+                        <label for="website">No completar</label>
+                        <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
                     </div>
                     <button type="submit" class="form-btn" data-i18n="contact.btn">enviar mensaje</button>
                 </form>
@@ -91,6 +97,15 @@
         <p class="footer-copy" data-i18n="footer.copy">All rights reserved | Lucas Raboni | 2026</p>
     </footer>
 
+    <script>
+        // Si el servidor volvió con ?error=..., mostramos el aviso (i18n.js le pone el texto)
+        const tipoError = new URLSearchParams(location.search).get('error')
+        if (['datos', 'envio', 'limite'].includes(tipoError)) {
+            const aviso = document.getElementById('form-error')
+            aviso.dataset.i18n = 'contact.error.' + tipoError
+            aviso.hidden = false
+        }
+    </script>
     <script src="/js/theme.js"></script>
     <script src="/js/i18n.js"></script>
 </body>

@@ -55,6 +55,9 @@ const LANG = {
     'contact.info.title':    'o encontrame en',
     'contact.avail.label':   'disponibilidad',
     'contact.avail.value':   'Abierto a oportunidades freelance',
+    'contact.error.datos':   'Revisá los datos: falta completar algún campo o el email no es válido.',
+    'contact.error.envio':   'No se pudo enviar el mensaje. Probá de nuevo en un rato o escribime a lucasraboni7@gmail.com.',
+    'contact.error.limite':  'Enviaste varios mensajes seguidos. Esperá unos minutos y probá de nuevo.',
     // Gracias
     'gracias.title':    'mensaje enviado',
     'gracias.subtitle': 'gracias, te respondo a la brevedad',
@@ -124,6 +127,9 @@ const LANG = {
     'contact.info.title':    'or find me at',
     'contact.avail.label':   'availability',
     'contact.avail.value':   'Open to freelance opportunities',
+    'contact.error.datos':   'Please check your details: a field is missing or the email is not valid.',
+    'contact.error.envio':   "The message couldn't be sent. Try again later or email me at lucasraboni7@gmail.com.",
+    'contact.error.limite':  "You've sent several messages in a row. Please wait a few minutes and try again.",
     // Gracias
     'gracias.title':    'message sent',
     'gracias.subtitle': "thanks, I'll get back to you shortly",
@@ -193,6 +199,9 @@ const LANG = {
     'contact.info.title':    'ou retrouvez-moi sur',
     'contact.avail.label':   'disponibilité',
     'contact.avail.value':   'Ouvert aux opportunités freelance',
+    'contact.error.datos':   "Vérifiez vos informations : un champ est vide ou l'email n'est pas valide.",
+    'contact.error.envio':   "Le message n'a pas pu être envoyé. Réessayez plus tard ou écrivez-moi à lucasraboni7@gmail.com.",
+    'contact.error.limite':  'Vous avez envoyé plusieurs messages à la suite. Attendez quelques minutes et réessayez.',
     // Gracias
     'gracias.title':    'message envoyé',
     'gracias.subtitle': 'merci, je vous réponds dans les plus brefs délais',
@@ -262,6 +271,9 @@ const LANG = {
     'contact.info.title':    'ou me encontre em',
     'contact.avail.label':   'disponibilidade',
     'contact.avail.value':   'Aberto a oportunidades freelance',
+    'contact.error.datos':   'Confira os dados: falta preencher algum campo ou o email não é válido.',
+    'contact.error.envio':   'Não foi possível enviar a mensagem. Tente de novo mais tarde ou me escreva em lucasraboni7@gmail.com.',
+    'contact.error.limite':  'Você enviou várias mensagens seguidas. Espere alguns minutos e tente de novo.',
     // Gracias
     'gracias.title':    'mensagem enviada',
     'gracias.subtitle': 'obrigado, responderei em breve',
