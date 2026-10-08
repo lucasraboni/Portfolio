@@ -40,9 +40,6 @@ const LANG = {
     'form.webmanager':      'Encargado Web',
     // Habilidades
     'hab.hero':     'habilidades',
-    'hab.frontend': 'frontend',
-    'hab.backend':  'backend',
-    'hab.tools':    'herramientas',
     // Portfolio
     'port.hero':    'portfolio',
     // Contacto
@@ -68,6 +65,20 @@ const LANG = {
     'detail.type':  'tipo',
     'detail.view':  'ver proyecto',
     'detail.code':  'ver código',
+    // Proyectos y habilidades
+    'hab.daily':            'uso a diario',
+    'hab.good':             'manejo bien',
+    'hab.know':             'conozco',
+    'port.cetasa.desc':     'Sitio real de la cooperativa eléctrica de Azcuénaga, con panel de administración.',
+    'port.vinyl.title':     'Vinyl Vibes (maquetado)',
+    'port.vinyl.desc':      'Tienda ficticia de vinilos de techno. La primera versión del proyecto.',
+    'port.redondos.desc':   'Sitio sobre la banda, hecho solo con HTML y CSS.',
+    'detail.cetasa.desc':   'Sitio de CETASA, la Cooperativa de Electrificación y Tecnificación Agropecuaria Solís y Azcuénaga, donde trabajo desde 2020. Es un proyecto real: los socios entran a leer novedades, ver los servicios, descargar la factura y mandar consultas. Tiene un panel de administración para cargar noticias y gestionar reclamos, un formulario de contacto que llega por mail, y está preparado para buscadores y para verse bien en el celular.',
+    'detail.vinyl.desc':    'La primera versión de Vinyl Vibes, una tienda ficticia de vinilos de techno. Es un sitio de una sola página con catálogo, clubes, artistas y contacto, hecho para un parcial en Da Vinci. Después seguí desarrollando la misma idea con PHP, Laravel y React.',
+    'detail.redondos.desc': 'Uno de mis primeros sitios: una página sobre Patricio Rey y sus Redonditos de Ricota, con la historia de la banda, la discografía y una sección de entradas. Lo hice como trabajo final de maquetado, solo con HTML y CSS, sin frameworks ni librerías.',
+    'type.client':          'Cliente real · Cooperativa Eléctrica de Azcuénaga',
+    'type.uni':             'Proyecto universitario',
+    'type.study':           'Proyecto de estudio',
     // Footer
     'footer.copy':  'Todos los derechos reservados | Lucas Raboni | 2026',
   },
@@ -113,9 +124,6 @@ const LANG = {
     'form.webmanager':      'Web Manager',
     // Habilidades
     'hab.hero':     'skills',
-    'hab.frontend': 'frontend',
-    'hab.backend':  'backend',
-    'hab.tools':    'tools',
     // Portfolio
     'port.hero':    'portfolio',
     // Contacto
@@ -141,6 +149,20 @@ const LANG = {
     'detail.type':  'type',
     'detail.view':  'view project',
     'detail.code':  'view code',
+    // Proyectos y habilidades
+    'hab.daily':            'daily use',
+    'hab.good':             'comfortable with',
+    'hab.know':             'familiar with',
+    'port.cetasa.desc':     'Real website for the Azcuénaga electric cooperative, with an admin panel.',
+    'port.vinyl.title':     'Vinyl Vibes (static site)',
+    'port.vinyl.desc':      'A fictional techno vinyl store. The first version of the project.',
+    'port.redondos.desc':   'A site about the band, built with just HTML and CSS.',
+    'detail.cetasa.desc':   "Website for CETASA, the electric and agricultural cooperative of Solís and Azcuénaga, where I've worked since 2020. It's a real project: members use it to read news, check services, download their bill and send inquiries. It has an admin panel to publish news and manage service claims, a contact form that arrives by email, and it's ready for search engines and looks good on phones.",
+    'detail.vinyl.desc':    "The first version of Vinyl Vibes, a fictional techno vinyl store. It's a one-page site with a catalog, clubs, artists and contact, made for a midterm at Da Vinci. Later I kept developing the same idea with PHP, Laravel and React.",
+    'detail.redondos.desc': "One of my first websites: a page about Patricio Rey y sus Redonditos de Ricota, with the band's history, discography and a tickets section. I made it as a final layout project, using only HTML and CSS, with no frameworks or libraries.",
+    'type.client':          'Real client · Azcuénaga Electric Cooperative',
+    'type.uni':             'University project',
+    'type.study':           'Study project',
     // Footer
     'footer.copy':  'All rights reserved | Lucas Raboni | 2026',
   },
@@ -186,9 +208,6 @@ const LANG = {
     'form.webmanager':      'Responsable Web',
     // Habilidades
     'hab.hero':     'compétences',
-    'hab.frontend': 'frontend',
-    'hab.backend':  'backend',
-    'hab.tools':    'outils',
     // Portfolio
     'port.hero':    'portfolio',
     // Contacto
@@ -214,6 +233,20 @@ const LANG = {
     'detail.type':  'type',
     'detail.view':  'voir le projet',
     'detail.code':  'voir le code',
+    // Proyectos y habilidades
+    'hab.daily':            'au quotidien',
+    'hab.good':             'je maîtrise',
+    'hab.know':             'je connais',
+    'port.cetasa.desc':     "Site réel de la coopérative électrique d'Azcuénaga, avec un panneau d'administration.",
+    'port.vinyl.title':     'Vinyl Vibes (site statique)',
+    'port.vinyl.desc':      'Boutique fictive de vinyles techno. La première version du projet.',
+    'port.redondos.desc':   'Un site sur le groupe, fait uniquement en HTML et CSS.',
+    'detail.cetasa.desc':   "Site de CETASA, la coopérative d'électrification et de technification agricole de Solís et Azcuénaga, où je travaille depuis 2020. C'est un vrai projet : les membres y lisent les actualités, consultent les services, téléchargent leur facture et envoient leurs questions. Il a un panneau d'administration pour publier des actualités et gérer les réclamations, un formulaire de contact qui arrive par email, et il est prêt pour les moteurs de recherche et pour le mobile.",
+    'detail.vinyl.desc':    "La première version de Vinyl Vibes, une boutique fictive de vinyles techno. C'est un site d'une seule page avec catalogue, clubs, artistes et contact, réalisé pour un partiel à Da Vinci. Ensuite, j'ai continué à développer la même idée avec PHP, Laravel et React.",
+    'detail.redondos.desc': "Un de mes premiers sites : une page sur Patricio Rey y sus Redonditos de Ricota, avec l'histoire du groupe, la discographie et une section billets. Je l'ai fait comme projet final d'intégration, uniquement en HTML et CSS, sans frameworks ni bibliothèques.",
+    'type.client':          "Client réel · Coopérative électrique d'Azcuénaga",
+    'type.uni':             'Projet universitaire',
+    'type.study':           "Projet d'études",
     // Footer
     'footer.copy':  'Tous droits réservés | Lucas Raboni | 2026',
   },
@@ -259,9 +292,6 @@ const LANG = {
     'form.webmanager':      'Responsável Web',
     // Habilidades
     'hab.hero':     'habilidades',
-    'hab.frontend': 'frontend',
-    'hab.backend':  'backend',
-    'hab.tools':    'ferramentas',
     // Portfolio
     'port.hero':    'portfolio',
     // Contacto
@@ -287,6 +317,20 @@ const LANG = {
     'detail.type':  'tipo',
     'detail.view':  'ver projeto',
     'detail.code':  'ver código',
+    // Proyectos y habilidades
+    'hab.daily':            'uso diário',
+    'hab.good':             'domino bem',
+    'hab.know':             'conheço',
+    'port.cetasa.desc':     'Site real da cooperativa elétrica de Azcuénaga, com painel de administração.',
+    'port.vinyl.title':     'Vinyl Vibes (site estático)',
+    'port.vinyl.desc':      'Loja fictícia de vinis de techno. A primeira versão do projeto.',
+    'port.redondos.desc':   'Um site sobre a banda, feito só com HTML e CSS.',
+    'detail.cetasa.desc':   'Site da CETASA, a cooperativa de eletrificação e tecnificação agropecuária de Solís e Azcuénaga, onde trabalho desde 2020. É um projeto real: os associados entram para ler notícias, ver os serviços, baixar a fatura e enviar dúvidas. Tem um painel de administração para publicar notícias e gerenciar reclamações, um formulário de contato que chega por email, e está preparado para os buscadores e para ficar bem no celular.',
+    'detail.vinyl.desc':    'A primeira versão do Vinyl Vibes, uma loja fictícia de vinis de techno. É um site de uma página só com catálogo, clubes, artistas e contato, feito para uma prova na Da Vinci. Depois continuei desenvolvendo a mesma ideia com PHP, Laravel e React.',
+    'detail.redondos.desc': 'Um dos meus primeiros sites: uma página sobre Patricio Rey y sus Redonditos de Ricota, com a história da banda, a discografia e uma seção de ingressos. Fiz como trabalho final de diagramação, só com HTML e CSS, sem frameworks nem bibliotecas.',
+    'type.client':          'Cliente real · Cooperativa Elétrica de Azcuénaga',
+    'type.uni':             'Projeto universitário',
+    'type.study':           'Projeto de estudo',
     // Footer
     'footer.copy':  'Todos os direitos reservados | Lucas Raboni | 2026',
   }

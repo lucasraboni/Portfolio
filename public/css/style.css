@@ -221,35 +221,24 @@ footer {
 }
 
 /* === HABILIDADES === */
-.skills-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0 60px;
-}
+.skill-group { margin-bottom: 56px; }
 
-.skill-item { margin-bottom: 28px; }
-
-.skill-label {
+.skill-tags {
+    list-style: none;
     display: flex;
-    justify-content: space-between;
-    font-size: 0.88rem;
-    font-weight: 400;
-    margin-bottom: 8px;
-    letter-spacing: 0.04em;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-.skill-bar {
-    height: 2px;
-    background-color: rgba(255,255,255,0.1);
-    border-radius: 2px;
-    overflow: hidden;
+.skill-tags li {
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 999px;
+    padding: 8px 18px;
+    font-size: 0.9rem;
+    font-weight: 300;
+    letter-spacing: 0.03em;
 }
 
-.skill-fill {
-    height: 100%;
-    background-color: #fff;
-    border-radius: 2px;
-}
 
 /* === PORTFOLIO === */
 .portfolio-grid {
@@ -610,8 +599,7 @@ body.light-mode .footer-copy,
 body.light-mode .footer-icons a { color: #111; }
 body.light-mode .timeline::before { background-color: rgba(0,0,0,0.12); }
 body.light-mode .timeline-item::before { background-color: #111; }
-body.light-mode .skill-bar { background-color: rgba(0,0,0,0.08); }
-body.light-mode .skill-fill { background-color: #111; }
+body.light-mode .skill-tags li { border-color: rgba(0,0,0,0.2); }
 body.light-mode .dato-item,
 body.light-mode .info-item { border-bottom-color: rgba(0,0,0,0.08); }
 body.light-mode .section-title { border-bottom-color: rgba(0,0,0,0.1); }
@@ -809,11 +797,6 @@ body.menu-open { overflow: hidden; }
     .formacion-grid {
         grid-template-columns: 1fr;
         gap: 48px;
-    }
-
-    /* HABILIDADES */
-    .skills-grid {
-        grid-template-columns: 1fr;
     }
 
     /* PORTFOLIO */
