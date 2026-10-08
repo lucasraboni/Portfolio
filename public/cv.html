@@ -193,6 +193,17 @@
             opacity: 0.65;
         }
 
+        /* MOBILE */
+        @media (max-width: 600px) {
+            .cv-actions { padding: 20px 16px; }
+            .cv-page { padding: 32px 20px; border-left: none; border-right: none; }
+            .cv-name { font-size: 1.9rem; }
+            .cv-header { flex-direction: column; gap: 24px; }
+            .cv-contact-block { text-align: left; }
+            .cv-contact-item { overflow-wrap: anywhere; }
+            .cv-grid { grid-template-columns: 1fr; gap: 0; }
+        }
+
         /* IMPRIMIR */
         @media print {
             body { background: #fff; color: #111; }
@@ -305,7 +316,7 @@
                     <p class="cv-section-title">experiencia</p>
 
                     <div class="cv-item">
-                        <p class="cv-item-date">2026 — próximamente</p>
+                        <p class="cv-item-date">2026 — actualidad</p>
                         <p class="cv-item-title">Encargado Web</p>
                         <p class="cv-item-sub">CETASA · Cooperativa Eléctrica de Azcuenaga</p>
                     </div>

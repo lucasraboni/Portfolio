@@ -38,6 +38,23 @@ nav {
     z-index: 100;
 }
 
+/* El fondo va en un pseudo-elemento: si el blur estuviera en el nav,
+   el menú mobile (position: fixed) quedaría atrapado adentro del nav */
+nav::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-bottom: 1px solid transparent;
+    transition: background-color 0.3s ease;
+}
+
+nav.scrolled::before {
+    background-color: rgba(0,0,0,0.85);
+    backdrop-filter: blur(10px);
+    border-bottom-color: rgba(255,255,255,0.08);
+}
+
 .nav-links {
     display: flex;
     gap: 28px;
@@ -64,6 +81,7 @@ nav {
 .hero {
     position: relative;
     height: 100vh;
+    height: 100svh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -572,10 +590,10 @@ body.light-mode {
     color: #111;
 }
 body.light-mode a { color: #111; }
-body.light-mode nav {
+body.light-mode nav::before {
     background-color: rgba(248,248,248,0.95);
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(0,0,0,0.08);
+    border-bottom-color: rgba(0,0,0,0.08);
 }
 body.light-mode .nav-links a,
 body.light-mode .nav-icons a { color: #111; }
@@ -685,6 +703,15 @@ body.light-mode .form-btn:hover { background: #111; color: #fff; }
 
 body.light-mode #hamburger { color: #111; }
 
+/* Con el menú mobile abierto, la página de atrás no scrollea */
+body.menu-open { overflow: hidden; }
+
+/* En pantallas táctiles no hay hover: el texto de las cards se ve siempre */
+@media (hover: none), (max-width: 768px) {
+    .portfolio-overlay { opacity: 1; }
+    .portfolio-item img { filter: none; }
+}
+
 /* === RESPONSIVE MOBILE === */
 @media (max-width: 768px) {
 
@@ -781,4 +808,17 @@ body.light-mode #hamburger { color: #111; }
 
     /* FOOTER */
     footer { padding: 28px 24px; }
+
+    /* NAV: las redes ya están en el footer; así tema e idiomas
+       tienen lugar y se pueden tocar con el dedo */
+    .nav-icons > a { display: none; }
+    .lang-btn { font-size: 0.75rem; padding: 10px 6px; }
+    #theme-toggle { padding: 10px; margin-left: 4px; font-size: 1.1rem; }
+
+    /* PORTFOLIO: overlay más compacto para que entre en la card */
+    .portfolio-overlay { padding: 20px; }
+    .overlay-title { font-size: 1.15rem; }
+
+    /* BOTÓN VOLVER ARRIBA */
+    #scroll-top { bottom: 20px; right: 20px; }
 }

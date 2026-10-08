@@ -43,22 +43,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.createElement('button')
     hamburger.id = 'hamburger'
     hamburger.setAttribute('aria-label', 'Menú')
+    hamburger.setAttribute('aria-expanded', 'false')
     hamburger.innerHTML = '<i class="fas fa-bars"></i>'
     nav.insertBefore(hamburger, nav.firstChild)
 
+    function toggleMenu(abrir) {
+        navLinks.classList.toggle('nav-open', abrir)
+        document.body.classList.toggle('menu-open', abrir)
+        hamburger.setAttribute('aria-expanded', abrir)
+        hamburger.innerHTML = abrir ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>'
+    }
+
     hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('nav-open')
-        hamburger.innerHTML = navLinks.classList.contains('nav-open')
-            ? '<i class="fas fa-times"></i>'
-            : '<i class="fas fa-bars"></i>'
+        toggleMenu(!navLinks.classList.contains('nav-open'))
     })
 
     navLinks.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            navLinks.classList.remove('nav-open')
-            hamburger.innerHTML = '<i class="fas fa-bars"></i>'
-        })
+        link.addEventListener('click', () => toggleMenu(false))
     })
+
+    // === FONDO DEL NAV AL SCROLLEAR ===
+    const marcarScroll = () => nav.classList.toggle('scrolled', window.scrollY > 20)
+    marcarScroll()
+    window.addEventListener('scroll', marcarScroll, { passive: true })
 
     // === BOTÓN VOLVER ARRIBA ===
     const paginasConScroll = ['/sobre-mi', '/formacion', '/habilidades', '/portfolio', '/contacto']
