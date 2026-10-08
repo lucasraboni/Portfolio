@@ -59,6 +59,9 @@ const LANG = {
     'gracias.title':    'mensaje enviado',
     'gracias.subtitle': 'gracias, te respondo a la brevedad',
     'gracias.back':     'volver al inicio',
+    // 404
+    '404.title':        '404',
+    '404.subtitle':     'esta página no existe o se movió',
     // Detalle portfolio
     'detail.back':  'volver al portfolio',
     'detail.year':  'año',
@@ -143,6 +146,9 @@ const LANG = {
     'gracias.title':    'message sent',
     'gracias.subtitle': "thanks, I'll get back to you shortly",
     'gracias.back':     'back to home',
+    // 404
+    '404.title':        '404',
+    '404.subtitle':     "this page doesn't exist or was moved",
     // Detalle portfolio
     'detail.back':  'back to portfolio',
     'detail.year':  'year',
@@ -227,6 +233,9 @@ const LANG = {
     'gracias.title':    'message envoyé',
     'gracias.subtitle': 'merci, je vous réponds dans les plus brefs délais',
     'gracias.back':     "retour à l'accueil",
+    // 404
+    '404.title':        '404',
+    '404.subtitle':     "cette page n'existe pas ou a été déplacée",
     // Detalle portfolio
     'detail.back':  'retour au portfolio',
     'detail.year':  'année',
@@ -311,6 +320,9 @@ const LANG = {
     'gracias.title':    'mensagem enviada',
     'gracias.subtitle': 'obrigado, responderei em breve',
     'gracias.back':     'voltar ao início',
+    // 404
+    '404.title':        '404',
+    '404.subtitle':     'esta página não existe ou foi movida',
     // Detalle portfolio
     'detail.back':  'voltar ao portfolio',
     'detail.year':  'ano',

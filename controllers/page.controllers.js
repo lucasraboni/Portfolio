@@ -16,6 +16,35 @@ export const portfolio   = servirHTML('portfolio.html')
 export const contacto    = servirHTML('contacto.html')
 export const gracias     = servirHTML('gracias.html')
 
+export function noEncontrado(req, res) {
+    res.status(404).sendFile(join(__dirname, '../public', '404.html'))
+}
+
+// === SEO ===
+// Si SITE_URL no está en el .env, se usa el dominio con el que entró la visita
+function urlBase(req) {
+    return (process.env.SITE_URL || `${req.protocol}://${req.get('host')}`).replace(/\/$/, '')
+}
+
+const PAGINAS_SITEMAP = [
+    '/', '/sobre-mi', '/formacion', '/habilidades', '/portfolio', '/contacto', '/cv.html',
+    '/portfolio/cetasa.html', '/portfolio/vinyl-maquetado.html', '/portfolio/redondos.html'
+]
+
+export function robots(req, res) {
+    res.type('text/plain').send(
+        `User-agent: *\nAllow: /\nDisallow: /gracias\n\nSitemap: ${urlBase(req)}/sitemap.xml\n`
+    )
+}
+
+export function sitemap(req, res) {
+    const base = urlBase(req)
+    const urls = PAGINAS_SITEMAP.map(p => `  <url><loc>${base}${p}</loc></url>`).join('\n')
+    res.type('application/xml').send(
+        `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`
+    )
+}
+
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {

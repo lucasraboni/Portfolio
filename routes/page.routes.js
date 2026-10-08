@@ -21,5 +21,7 @@ router.get('/portfolio', controllers.portfolio)
 router.get('/contacto', controllers.contacto)
 router.post('/contacto', limiteContacto, controllers.contactoEnviar)
 router.get('/gracias', controllers.gracias)
+router.get('/robots.txt', controllers.robots)
+router.get('/sitemap.xml', controllers.sitemap)
 
 export default router

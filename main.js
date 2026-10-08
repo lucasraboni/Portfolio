@@ -1,6 +1,7 @@
 import 'dotenv/config'
 import express from 'express'
 import pageRoutes from './routes/page.routes.js'
+import { noEncontrado } from './controllers/page.controllers.js'
 import { securityHeaders } from './middlewares/security.js'
 
 const app = express()
@@ -13,6 +14,9 @@ app.use(express.urlencoded({ extended: false, limit: '10kb' }))
 app.use(express.static('public', { redirect: false }))
 
 app.use('/', pageRoutes)
+
+// Ninguna ruta ni archivo coincidió
+app.use(noEncontrado)
 
 // Errores no manejados: se loguean en el servidor, pero al visitante no le mostramos detalles
 app.use((err, req, res, next) => {
